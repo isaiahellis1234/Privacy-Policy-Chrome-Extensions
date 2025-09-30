@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Privacy Policy — {{EXTENSION_NAME}} by Isaiah Ellis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy Policy for {{EXTENSION_NAME}}." />
+  <style>
+    :root { --bg:#0b0f14; --card:#111826; --text:#e6eef8; --muted:#9fb0c3; --accent:#4e9cff; --border:#253246; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color: var(--text); }
+    .wrap { max-width: 840px; margin: 40px auto; padding: 0 20px; }
+    header { margin-bottom: 16px; }
+    h1 { font-size: 28px; margin: 0 0 6px; }
+    .muted { color: var(--muted); }
+    section { background: var(--card); border:1px solid var(--border); border-radius: 12px; padding: 18px; margin: 14px 0; }
+    h2 { margin: 0 0 10px; font-size: 18px; }
+    a { color: var(--accent); text-decoration: none; }
+    ul { margin: 8px 0 0 18px; }
+    footer { margin-top: 20px; color: var(--muted); font-size: 14px; }
+    code { background:#0e1a27; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Privacy Policy — {{EXTENSION_NAME}}</h1>
+      <div class="muted">Published by {{PUBLISHER_NAME}}</div>
+      <div class="muted">Last updated: {{LAST_UPDATED}}</div>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+      <p>{{EXTENSION_NAME}} (“the Extension”) respects your privacy. This page explains what data we handle, how we use it, and your choices.</p>
+    </section>
+
+    <section>
+      <h2>What We Collect</h2>
+      <p>By default, the Extension does not collect personal information beyond what is necessary to provide its core features.</p>
+      <ul>
+        <li><strong>Local App Data</strong>: Configuration, preferences, and content created by you while using the Extension (e.g., saved sessions, settings). Stored via Chrome’s <code>chrome.storage</code> on your device.</li>
+        <li><strong>Optional Cloud Sync (if enabled)</strong>: If you opt in, data required to sync your content across devices (e.g., saved sessions) may be stored with a third-party provider (see “Third Parties”).</li>
+      </ul>
+      <p><em>No data is sold or shared with advertisers.</em></p>
+    </section>
+
+    <section>
+      <h2>Permissions We Use</h2>
+      <ul>
+        <li><code>storage</code>: Save your settings/content so they persist across browser restarts.</li>
+        <li><code>tabs</code> {{IF_USED_TABS}}: Read the URLs/titles of your open tabs solely to enable {{TABS_JUSTIFICATION}}. This data remains local unless you enable sync.</li>
+        <!-- Add/remove any other permissions your extension actually uses -->
+      </ul>
+    </section>
+
+    <section>
+      <h2>How We Use Your Data</h2>
+      <ul>
+        <li>To provide core functionality (e.g., save/restore sessions, apply your preferences).</li>
+        <li>To deliver optional features you explicitly enable (e.g., cross-device sync).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data Storage & Retention</h2>
+      <ul>
+        <li><strong>Local Storage</strong>: Data is stored on your device using Chrome’s storage APIs and remains until you remove the Extension or clear the data.</li>
+        <li><strong>Cloud Storage (optional)</strong>: If enabled, data is stored with {{SYNC_PROVIDER_NAME}} and retained until you delete it or disable sync.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Third Parties</h2>
+      <p>If you opt into cloud sync or sign-in, we may use:</p>
+      <ul>
+        <li>{{SYNC_PROVIDER_NAME}} — for authentication and data sync. See their policy: {{SYNC_PROVIDER_POLICY_URL}}</li>
+        <!-- Add analytics or other services only if you actually use them -->
+      </ul>
+      <p>We do not sell personal data.</p>
+    </section>
+
+    <section>
+      <h2>Your Choices</h2>
+      <ul>
+        <li><strong>Local-only Use</strong>: Use the Extension without enabling any cloud features.</li>
+        <li><strong>Disable Sync</strong>: If enabled, you can turn off sync at any time within the Extension’s settings.</li>
+        <li><strong>Delete Data</strong>: You can clear data from the Extension UI or via your browser’s site data settings.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Children’s Privacy</h2>
+      <p>The Extension is not directed to children under 13. We do not knowingly collect data from children.</p>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this policy to reflect product or legal changes. We will revise the “Last updated” date above. Material changes may be highlighted within the Extension or on this page.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Questions? Contact {{CONTACT_NAME}} at <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+    </section>
+
+    <footer>
+      <div>© {{CURRENT_YEAR}} {{PUBLISHER_NAME}}. All rights reserved.</div>
+    </footer>
+  </div>
+</body>
+</html>
